@@ -43,5 +43,5 @@ resource "aws_s3_bucket_policy" "static_site_access_logs" {
 }
 
 resource "aws_cloudfront_origin_access_identity" "static_site_origin_access_identity" {
-  comment = "access-identity-S3-${terraform.workspace}-${var.bucket_static_site}"
+  comment = "access-identity-S3-${var.bucket_name}"
 }

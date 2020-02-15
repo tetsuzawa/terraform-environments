@@ -22,12 +22,9 @@ variable "zone_id" {
 }
 
 variable "acm_certificate_arn" {
-  description = "The Domain of site. (e.g. `example.com`)"
-}
-
-variable "acm" {
   type = map(string)
   default = {}
+  description = "The Domain of site. (e.g. `example.com`)"
 }
 
 variable "iam" {

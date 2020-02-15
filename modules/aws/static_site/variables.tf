@@ -6,14 +6,13 @@ variable "bucket_name" {
 variable "main_domain_name" {
   type = string
   default = ""
-  description = "The Domain which you want to serve the website on. (e.g. `example.com`)"
+  description = "The Domain which you want to serve the website on (e.g. `example.com`)"
 }
 
 variable "sub_domain_name" {
   type = map(string)
   default = {
-    "stg.name" = "stg-www"
-    "default.name" = "www"
+    "default.name" = ""
   }
 }
 
@@ -24,7 +23,7 @@ variable "zone_id" {
 variable "acm_certificate_arn" {
   type = map(string)
   default = {}
-  description = "The Domain of site. (e.g. `example.com`)"
+  description = "The Domain of site (e.g. `example.com`)"
 }
 
 variable "iam" {

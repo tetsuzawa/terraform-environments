@@ -1,6 +1,6 @@
 resource "aws_cloudfront_distribution" "static_site" {
   aliases = [
-    "${var.sub_domain_name =="" ? "" : var.sub_domain_name + "."}"+var.main_domain_name]
+    var.sub_domain_name == "" ? var.main_domain_name : "${var.sub_domain_name}.${var.main_domain_name}"]
 
   origin {
     domain_name = aws_s3_bucket.static_site.bucket_regional_domain_name

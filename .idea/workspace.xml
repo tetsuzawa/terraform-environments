@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e29d7fe6-e8bf-40fe-befe-3520037aca23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/modules/aws/static_site/cloudfront.tf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/aws/static_site/variables.tf" beforeDir="false" afterPath="$PROJECT_DIR$/modules/aws/static_site/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/aws/acm/acm.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/aws/acm/output.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/aws/acm/variables.tf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/aws/acm/versions.tf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +38,11 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/modules/aws/acm" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "static_site" {
 }
 
 resource "aws_s3_bucket" "static_site_access_logs" {
-  bucket        = "${terraform.workspace}-${var.bucket_static_site}-logs"
+  bucket        = "${terraform.workspace}-${var.bucket_name}-logs"
   force_destroy = true
 }
 

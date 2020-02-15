@@ -1,14 +1,10 @@
 resource "aws_cloudfront_distribution" "static_site" {
   aliases = [
-    "${lookup(
-        var.sub_domain_name,
-        "${terraform.workspace}.name",
-        var.sub_domain_name["default.name"]
-      )}.${var.main_domain_name}"]
+    "${var.sub_domain_name =="" ? "" : var.sub_domain_name + "."}"+var.main_domain_name]
 
   origin {
     domain_name = aws_s3_bucket.static_site.bucket_regional_domain_name
-    origin_id = "S3-${terraform.workspace}-${var.bucket_name}"
+    origin_id = "S3-${var.bucket_name}"
 
     s3_origin_config {
       origin_access_identity = aws_cloudfront_origin_access_identity.static_site_origin_access_identity.cloudfront_access_identity_path
@@ -27,7 +23,7 @@ resource "aws_cloudfront_distribution" "static_site" {
       "GET",
       "HEAD"]
     compress = false
-    target_origin_id = "S3-${terraform.workspace}-${var.bucket_name}"
+    target_origin_id = "S3-${var.bucket_name}"
 
     forwarded_values {
       query_string = false

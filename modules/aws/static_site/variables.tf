@@ -30,3 +30,8 @@ variable "iam" {
   type = map(string)
   default = {}
 }
+
+variable "cloudfront_region" {
+  type = string
+  default = "us-east-1"
+}

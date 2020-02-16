@@ -1,7 +1,5 @@
 resource "aws_cloudfront_distribution" "static_site" {
 
-  provider = var.cloudfront_region
-
   aliases = [
     var.sub_domain_name == "" ? var.main_domain_name : "${var.sub_domain_name}.${var.main_domain_name}"]
 
